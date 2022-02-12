@@ -28,3 +28,11 @@ for d in data:
 print(sum_len)
            
 #print('all data was read, there are', len(data), 'data')
+
+
+new = []
+for d in data:
+    if len(d) < 100:
+        new.append(d)
+print('total', len(new), 'reviews length < 100')
+print(new[0])
