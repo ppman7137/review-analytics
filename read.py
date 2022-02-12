@@ -21,7 +21,7 @@ with open('reviews.txt', 'r') as f:
           print(len(data))
 print('the average length of each review is', round(length/count,2))
 
-
+#calculate total digital number
 sum_len = 0
 for d in data:
     sum_len = sum_len + len(d)
@@ -29,10 +29,35 @@ print(sum_len)
            
 #print('all data was read, there are', len(data), 'data')
 
-
+#calculate sum of length < 100
 new = []
 for d in data:
     if len(d) < 100:
         new.append(d)
 print('total', len(new), 'reviews length < 100')
 print(new[0])
+
+#calculate sum of review includes 'good'
+good = []
+for d in data:
+    if 'good' in d:
+        good.append(d)
+print('total', len(good), 'reviews')
+print(good[0])
+
+good = [1 for d in data if 'good' in d] #append in for-loop
+print(good)
+
+bad = ['bad' in d for d in data] #boolen in for-loop
+print(bad)
+
+bad = [0]
+for d in data:
+    bad.append('bad' in  d)
+
+
+
+
+
+
+
